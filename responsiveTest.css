@@ -1,0 +1,105 @@
+/*
+INSTRUCTIONS
+1. Make a copy of this codepen (you may have to create a free codepen account to do so)
+2. Using CSS properties alone, make this page responsive to different viewport widths. 
+3. Do not add or modify the HTML in any way
+4. Don't worry if it's not 100% perfect, get as close as you can
+3. Provide a link to your codepen
+*/
+
+* {
+    box-sizing: border-box; 
+  }
+  
+  .page-wrap {
+    width: 800px;
+    margin: 20px auto;
+  }
+  
+  .main-story {
+    position: relative;
+    margin: 0 0 25px 0;
+  }
+  
+  img {
+    display: block; 
+  }
+  
+  a {
+    color: lightblue;
+  }
+  
+  .story-intro {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    color: white;
+  }
+  
+  h1 {
+     font-size: 4em;
+  }
+  h1, h2 {
+    margin: 0 0 10px 0;
+  }
+  
+  .story-intro h1 {
+    font-size: 2.5em; 
+  }
+  .story-intro p {
+    margin: 0;
+  }
+  
+  .sub-stories {
+    overflow: hidden;
+    margin: 0 0 25px 0;  
+    display:flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .sub-story {
+    float: left;
+    width: 250px;
+    margin-right: 25px;
+    position: relative;
+    font-size: 80%;
+  }
+  
+  
+  .last {
+    margin-right: 0;
+  }
+  
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 2em;
+    }
+    .story-intro h1 {
+      font-size: 1.5em;
+    }     
+    .sub-stories h2{
+      font-size: 1rem;
+    }
+    
+    .page-wrap {
+    width: auto; 
+  } 
+    .main-story{
+      width:100%;
+      margin: 0 auto;
+    }
+    .main-story img{
+      width: -webkit-fill-available;
+    }
+      
+    .sub-stories {  
+    flex-direction: column;
+  }
+    .sub-story{
+      margin: auto;
+    }
+    
+  }
